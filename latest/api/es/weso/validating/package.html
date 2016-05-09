@@ -67,18 +67,18 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="es.weso.validating.All" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="All[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable"></a>
-      <a id="All[C,A,E&gt;:Throwable]:All[C,A,E]"></a>
+      <a id="All[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable"></a>
+      <a id="All[C,A,E&gt;:ConstraintError]:All[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="All.html"><span class="name">All</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.All.C">C</span>, <span class="extype" name="es.weso.validating.All.A">A</span>, <span class="extype" name="es.weso.validating.All.E">E</span>]]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.All.C">C</span>, <span class="extype" name="es.weso.validating.All.A">A</span>, <span class="extype" name="es.weso.validating.All.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="All.html"><span class="name">All</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.All.C">C</span>, <span class="extype" name="es.weso.validating.All.A">A</span>, <span class="extype" name="es.weso.validating.All.E">E</span>]]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.All.C">C</span>, <span class="extype" name="es.weso.validating.All.A">A</span>, <span class="extype" name="es.weso.validating.All.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@All[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@All[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -123,37 +123,56 @@ the constraints are satisfied
       <p class="shortcomment cmt">Constraint violation when there was an All constraint but some are not valid
 </p>
     </li><li name="es.weso.validating.AndConstraint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AndConstraint[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable"></a>
-      <a id="AndConstraint[C,A,E&gt;:Throwable]:AndConstraint[C,A,E]"></a>
+      <a id="AndConstraint[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable"></a>
+      <a id="AndConstraint[C,A,E&gt;:ConstraintError]:AndConstraint[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="AndConstraint.html"><span class="name">AndConstraint</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.E">E</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="AndConstraint.html"><span class="name">AndConstraint</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.E">E</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@AndConstraint[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@AndConstraint[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Given two constraints, creates a constraint that is satisfied when both are satisfied
 </p><div class="fullcomment"><div class="comment cmt"><p>Given two constraints, creates a constraint that is satisfied when both are satisfied
 </p></div><dl class="paramcmts block"><dt class="tparam">C</dt><dd class="cmt"><p>Context</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of Values to validate</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Type of errors</p></dd></dl></div>
+    </li><li name="es.weso.validating.Checked" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Checked[A,R[_],+E]extendsProductwithSerializable"></a>
+      <a id="Checked[A,R[_],+E]:Checked[A,R,E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Checked.html"><span class="name">Checked</span></a><span class="tparams">[<span name="A">A</span>, <span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="E">+E</span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.package@Checked[A,R[_],+E]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Checked defines values that have been validated
+</p><div class="fullcomment"><div class="comment cmt"><p>Checked defines values that have been validated
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of values</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>Explanation type of validation</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Error type</p></dd></dl></div>
     </li><li name="es.weso.validating.Constraint" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="Constraint[Context,A,E&gt;:Throwable]extendsAnyRef"></a>
-      <a id="Constraint[Context,A,E&gt;:Throwable]:Constraint[Context,A,E]"></a>
+      <a id="Constraint[Context,A,+E&gt;:es.weso.validating.ConstraintError]extendsAnyRef"></a>
+      <a id="Constraint[Context,A,+E&gt;:ConstraintError]:Constraint[Context,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">sealed abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Constraint.html"><span class="name">Constraint</span></a><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Constraint.html"><span class="name">Constraint</span></a><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>, <span name="E">+E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@Constraint[Context,A,E&gt;:Throwable]extendsAnyRef" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@Constraint[Context,A,+E&gt;:es.weso.validating.ConstraintError]extendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -162,19 +181,19 @@ validated value
 </p><div class="fullcomment"><div class="comment cmt"><p>A constraint can be seen as a function from a context and a value that returns a
 validated value
 </p></div><dl class="paramcmts block"><dt class="tparam">Context</dt><dd class="cmt"><p>Type of context in which the constraint is evaluated</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of values that the constraint validates</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Type of violation errors</p></dd></dl></div>
-    </li><li name="es.weso.validating.ConstraintError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ConstraintErrorextendsException"></a>
+    </li><li name="es.weso.validating.ConstraintError" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ConstraintErrorextendsAnyRef"></a>
       <a id="ConstraintError:ConstraintError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ConstraintError.html"><span class="name">ConstraintError</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+        <a href="ConstraintError.html"><span class="name">ConstraintError</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@ConstraintErrorextendsException" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@ConstraintErrorextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -198,7 +217,7 @@ validated value
     </span>
       <p class="shortcomment cmt">An Explanation about why a constraint is satisfied</p><div class="fullcomment"><div class="comment cmt"><p>An Explanation about why a constraint is satisfied</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of value that is being validated</p></dd></dl></div>
     </li><li name="es.weso.validating.MsgError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MsgErrorextendsValidatingErrorwithProductwithSerializable"></a>
+      <a id="MsgErrorextendsConstraintErrorwithProductwithSerializable"></a>
       <a id="MsgError:MsgError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -206,14 +225,15 @@ validated value
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="MsgError.html"><span class="name">MsgError</span></a><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="ValidatingError.html" class="extype" name="es.weso.validating.ValidatingError">ValidatingError</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="MsgError.html"><span class="name">MsgError</span></a><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@MsgErrorextendsValidatingErrorwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@MsgErrorextendsConstraintErrorwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Message based error
+</p>
     </li><li name="es.weso.validating.NDResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="NDResponse[A,R[_]]extendsProductwithSerializable"></a>
       <a id="NDResponse[A,R[_]]:NDResponse[A,R]"></a>
@@ -230,22 +250,20 @@ validated value
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Represents a non-deterministic response which can contain several
-values and reasons</p><div class="fullcomment"><div class="comment cmt"><p>Represents a non-deterministic response which can contain several
-values and reasons</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of values</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>A response container</p></dd></dl></div>
+      <p class="shortcomment cmt">Represents a non-deterministic response which can contain several responses</p><div class="fullcomment"><div class="comment cmt"><p>Represents a non-deterministic response which can contain several responses</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>Type of values</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>Response container</p></dd></dl></div>
     </li><li name="es.weso.validating.OneOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="OneOf[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable"></a>
-      <a id="OneOf[C,A,E&gt;:Throwable]:OneOf[C,A,E]"></a>
+      <a id="OneOf[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable"></a>
+      <a id="OneOf[C,A,E&gt;:ConstraintError]:OneOf[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="OneOf.html"><span class="name">OneOf</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OneOf.C">C</span>, <span class="extype" name="es.weso.validating.OneOf.A">A</span>, <span class="extype" name="es.weso.validating.OneOf.E">E</span>]]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OneOf.C">C</span>, <span class="extype" name="es.weso.validating.OneOf.A">A</span>, <span class="extype" name="es.weso.validating.OneOf.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="OneOf.html"><span class="name">OneOf</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OneOf.C">C</span>, <span class="extype" name="es.weso.validating.OneOf.A">A</span>, <span class="extype" name="es.weso.validating.OneOf.E">E</span>]]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OneOf.C">C</span>, <span class="extype" name="es.weso.validating.OneOf.A">A</span>, <span class="extype" name="es.weso.validating.OneOf.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@OneOf[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@OneOf[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -325,18 +343,18 @@ the constraints is satisfied
       <p class="shortcomment cmt">Constraint violation when there was a OneOf constraint and no one is valid
 </p>
     </li><li name="es.weso.validating.OrConstraint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="OrConstraint[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable"></a>
-      <a id="OrConstraint[C,A,E&gt;:Throwable]:OrConstraint[C,A,E]"></a>
+      <a id="OrConstraint[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable"></a>
+      <a id="OrConstraint[C,A,E&gt;:ConstraintError]:OrConstraint[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="OrConstraint.html"><span class="name">OrConstraint</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OrConstraint.C">C</span>, <span class="extype" name="es.weso.validating.OrConstraint.A">A</span>, <span class="extype" name="es.weso.validating.OrConstraint.E">E</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OrConstraint.C">C</span>, <span class="extype" name="es.weso.validating.OrConstraint.A">A</span>, <span class="extype" name="es.weso.validating.OrConstraint.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OrConstraint.C">C</span>, <span class="extype" name="es.weso.validating.OrConstraint.A">A</span>, <span class="extype" name="es.weso.validating.OrConstraint.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="OrConstraint.html"><span class="name">OrConstraint</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OrConstraint.C">C</span>, <span class="extype" name="es.weso.validating.OrConstraint.A">A</span>, <span class="extype" name="es.weso.validating.OrConstraint.E">E</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OrConstraint.C">C</span>, <span class="extype" name="es.weso.validating.OrConstraint.A">A</span>, <span class="extype" name="es.weso.validating.OrConstraint.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.OrConstraint.C">C</span>, <span class="extype" name="es.weso.validating.OrConstraint.A">A</span>, <span class="extype" name="es.weso.validating.OrConstraint.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@OrConstraint[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@OrConstraint[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -361,18 +379,18 @@ the constraints is satisfied
     </span>
       <p class="shortcomment cmt">Defines a validation response</p><div class="fullcomment"><div class="comment cmt"><p>Defines a validation response</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of values that have been validated</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>container of the response (it must be an instance of applicative)</p></dd><dt class="param">response</dt><dd class="cmt"><p>response value</p></dd></dl></div>
     </li><li name="es.weso.validating.Single" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Single[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable"></a>
-      <a id="Single[C,A,E&gt;:Throwable]:Single[C,A,E]"></a>
+      <a id="Single[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable"></a>
+      <a id="Single[C,A,E&gt;:ConstraintError]:Single[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Single.html"><span class="name">Single</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="validate">validate: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Single.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Single.html"><span class="name">Single</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="validate">validate: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Single.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@Single[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@Single[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -397,18 +415,18 @@ the constraints is satisfied
     </span>
       <p class="shortcomment cmt">A Single Constraint is satisfied.</p><div class="fullcomment"><div class="comment cmt"><p>A Single Constraint is satisfied.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of value that is being validated</p></dd><dt class="param">x</dt><dd class="cmt"><p>value that has been validated</p></dd><dt class="param">msg</dt><dd class="cmt"><p>explanation of validation</p></dd></dl></div>
     </li><li name="es.weso.validating.SomeOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="SomeOf[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable"></a>
-      <a id="SomeOf[C,A,E&gt;:Throwable]:SomeOf[C,A,E]"></a>
+      <a id="SomeOf[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable"></a>
+      <a id="SomeOf[C,A,E&gt;:ConstraintError]:SomeOf[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SomeOf.html"><span class="name">SomeOf</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.SomeOf.C">C</span>, <span class="extype" name="es.weso.validating.SomeOf.A">A</span>, <span class="extype" name="es.weso.validating.SomeOf.E">E</span>]]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.SomeOf.C">C</span>, <span class="extype" name="es.weso.validating.SomeOf.A">A</span>, <span class="extype" name="es.weso.validating.SomeOf.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="SomeOf.html"><span class="name">SomeOf</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.SomeOf.C">C</span>, <span class="extype" name="es.weso.validating.SomeOf.A">A</span>, <span class="extype" name="es.weso.validating.SomeOf.E">E</span>]]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.SomeOf.C">C</span>, <span class="extype" name="es.weso.validating.SomeOf.A">A</span>, <span class="extype" name="es.weso.validating.SomeOf.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@SomeOf[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@SomeOf[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -469,25 +487,6 @@ one of the constraints is satisfied
       </a>
     </span>
       
-    </li><li name="es.weso.validating.Validated" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Validated[A,R[_],+E&gt;:Throwable]extendsProductwithSerializable"></a>
-      <a id="Validated[A,R[_],+E&gt;:Throwable]:Validated[A,R,E]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Validated.html"><span class="name">Validated</span></a><span class="tparams">[<span name="A">A</span>, <span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="E">+E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@Validated[A,R[_],+E&gt;:Throwable]extendsProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Validated defines values that have been validated
-</p><div class="fullcomment"><div class="comment cmt"><p>Validated defines values that have been validated
-</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of values</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>Explanation type of validation</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Error type</p></dd></dl></div>
     </li><li name="es.weso.validating.ValidatingError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ValidatingErrorextendsException"></a>
       <a id="ValidatingError:ValidatingError"></a>
@@ -506,18 +505,18 @@ one of the constraints is satisfied
     </span>
       
     </li><li name="es.weso.validating.Xor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Xor[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable"></a>
-      <a id="Xor[C,A,E&gt;:Throwable]:Xor[C,A,E]"></a>
+      <a id="Xor[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable"></a>
+      <a id="Xor[C,A,E&gt;:ConstraintError]:Xor[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Xor.html"><span class="name">Xor</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Xor.C">C</span>, <span class="extype" name="es.weso.validating.Xor.A">A</span>, <span class="extype" name="es.weso.validating.Xor.E">E</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Xor.C">C</span>, <span class="extype" name="es.weso.validating.Xor.A">A</span>, <span class="extype" name="es.weso.validating.Xor.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Xor.C">C</span>, <span class="extype" name="es.weso.validating.Xor.A">A</span>, <span class="extype" name="es.weso.validating.Xor.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Xor.html"><span class="name">Xor</span></a><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Xor.C">C</span>, <span class="extype" name="es.weso.validating.Xor.A">A</span>, <span class="extype" name="es.weso.validating.Xor.E">E</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Xor.C">C</span>, <span class="extype" name="es.weso.validating.Xor.A">A</span>, <span class="extype" name="es.weso.validating.Xor.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Xor.C">C</span>, <span class="extype" name="es.weso.validating.Xor.A">A</span>, <span class="extype" name="es.weso.validating.Xor.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@Xor[C,A,E&gt;:Throwable]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.package@Xor[C,A,E&gt;:es.weso.validating.ConstraintError]extendsConstraint[C,A,E]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -531,7 +530,24 @@ one of the constraints is satisfied
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="es.weso.validating.Constraint" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="es.weso.validating.Checked" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Checked"></a>
+      <a id="Checked:Checked"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Checked$.html"><span class="name">Checked</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.package@Checked" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="es.weso.validating.Constraint" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Constraint"></a>
       <a id="Constraint:Constraint"></a>
       <h4 class="signature">
@@ -612,23 +628,6 @@ one of the constraints is satisfied
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#es.weso.validating.package@Response" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="es.weso.validating.Validated" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Validated"></a>
-      <a id="Validated:Validated"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Validated$.html"><span class="name">Validated</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.package@Validated" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

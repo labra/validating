@@ -47,7 +47,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Constraint</span><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Constraint</span><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>, <span name="E">+E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -100,18 +100,18 @@ validated value
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="es.weso.validating.Constraint#validate" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="validate:(A,Context)=&gt;es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="validate:(A,Context)⇒Validated[A,ConstraintReason,E]"></a>
+      <a id="validate:(A,Context)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
+      <a id="validate:(A,Context)⇒Checked[A,ConstraintReason,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.Context">Context</span>) ⇒ <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.E">E</span>]</span>
+        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.Context">Context</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint@validate:(A,Context)=&gt;es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint@validate:(A,Context)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

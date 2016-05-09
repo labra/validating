@@ -148,18 +148,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="es.weso.validating.Constraint#all" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="all[A,E&gt;:Throwable](vs:Seq[es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="all[A,E&gt;:Throwable](Seq[Validated[A,ConstraintReason,E]]):Validated[A,ConstraintReason,E]"></a>
+      <a id="all[A,E&gt;:es.weso.validating.ConstraintError](vs:Seq[es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
+      <a id="all[A,E&gt;:ConstraintError](Seq[Checked[A,ConstraintReason,E]]):Checked[A,ConstraintReason,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">all</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="vs">vs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.all.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.all.E">E</span>]]</span>)</span><span class="result">: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.all.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.all.E">E</span>]</span>
+        <span class="name">all</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="vs">vs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.all.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.all.E">E</span>]]</span>)</span><span class="result">: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.all.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.all.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint$@all[A,E&gt;:Throwable](vs:Seq[es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint$@all[A,E&gt;:es.weso.validating.ConstraintError](vs:Seq[es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -238,6 +238,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="es.weso.validating.Constraint#errString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="errString[A,E&gt;:es.weso.validating.ConstraintError](msg:String):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
+      <a id="errString[A,E&gt;:ConstraintError](String):Checked[A,ConstraintReason,E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errString</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.errString.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.errString.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.Constraint$@errString[A,E&gt;:es.weso.validating.ConstraintError](msg:String):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -364,69 +381,69 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="es.weso.validating.Constraint#oneOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="oneOf[A,E&gt;:Throwable](vs:Seq[es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="oneOf[A,E&gt;:Throwable](Seq[Validated[A,ConstraintReason,E]]):Validated[A,ConstraintReason,E]"></a>
+      <a id="oneOf[A,E&gt;:es.weso.validating.ConstraintError](vs:Seq[es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
+      <a id="oneOf[A,E&gt;:ConstraintError](Seq[Checked[A,ConstraintReason,E]]):Checked[A,ConstraintReason,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">oneOf</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="vs">vs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.oneOf.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.oneOf.E">E</span>]]</span>)</span><span class="result">: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.oneOf.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.oneOf.E">E</span>]</span>
+        <span class="name">oneOf</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="vs">vs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.oneOf.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.oneOf.E">E</span>]]</span>)</span><span class="result">: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.oneOf.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.oneOf.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint$@oneOf[A,E&gt;:Throwable](vs:Seq[es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint$@oneOf[A,E&gt;:es.weso.validating.ConstraintError](vs:Seq[es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Creates a validated value from a list of validated values that is satisfied when only one is satisfied</p><div class="fullcomment"><div class="comment cmt"><p>Creates a validated value from a list of validated values that is satisfied when only one is satisfied</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>Type of Values to validate</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Type of errors</p></dd><dt class="param">vs</dt><dd class="cmt"><p>Sequence of validated values</p></dd></dl></div>
     </li><li name="es.weso.validating.Constraint#or" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="or[A,E&gt;:Throwable](v1:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="or[A,E&gt;:Throwable](Validated[A,ConstraintReason,E],Validated[A,ConstraintReason,E]):Validated[A,ConstraintReason,E]"></a>
+      <a id="or[A,E&gt;:es.weso.validating.ConstraintError](v1:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
+      <a id="or[A,E&gt;:ConstraintError](Checked[A,ConstraintReason,E],Checked[A,ConstraintReason,E]):Checked[A,ConstraintReason,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">or</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="v1">v1: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.or.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.or.E">E</span>]</span>, <span name="v2">v2: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.or.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.or.E">E</span>]</span>)</span><span class="result">: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.or.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.or.E">E</span>]</span>
+        <span class="name">or</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="v1">v1: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.or.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.or.E">E</span>]</span>, <span name="v2">v2: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.or.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.or.E">E</span>]</span>)</span><span class="result">: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.or.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.or.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint$@or[A,E&gt;:Throwable](v1:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint$@or[A,E&gt;:es.weso.validating.ConstraintError](v1:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Creates a validated value from two validated values that is satisfied when at least one of them is satisfied</p><div class="fullcomment"><div class="comment cmt"><p>Creates a validated value from two validated values that is satisfied when at least one of them is satisfied</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>Type of Values to validate</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Type of errors</p></dd><dt class="param">v1</dt><dd class="cmt"><p>First validated value</p></dd><dt class="param">v2</dt><dd class="cmt"><p>Second validated value</p></dd></dl></div>
     </li><li name="es.weso.validating.Constraint#single" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="single[C,A,E&gt;:Throwable](fn:(A,C)=&gt;es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Constraint[C,A,E]"></a>
-      <a id="single[C,A,E&gt;:Throwable]((A,C)⇒Validated[A,ConstraintReason,E]):Constraint[C,A,E]"></a>
+      <a id="single[C,A,E&gt;:es.weso.validating.ConstraintError](fn:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Constraint[C,A,E]"></a>
+      <a id="single[C,A,E&gt;:ConstraintError]((A,C)⇒Checked[A,ConstraintReason,E]):Constraint[C,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">single</span><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="fn">fn: (<span class="extype" name="es.weso.validating.Constraint.single.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.single.C">C</span>) ⇒ <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.single.E">E</span>]</span>)</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Constraint.single.C">C</span>, <span class="extype" name="es.weso.validating.Constraint.single.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.single.E">E</span>]</span>
+        <span class="name">single</span><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="fn">fn: (<span class="extype" name="es.weso.validating.Constraint.single.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.single.E">E</span>]</span>)</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Constraint.single.C">C</span>, <span class="extype" name="es.weso.validating.Constraint.single.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.single.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint$@single[C,A,E&gt;:Throwable](fn:(A,C)=&gt;es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Constraint[C,A,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint$@single[C,A,E&gt;:es.weso.validating.ConstraintError](fn:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Constraint[C,A,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Creates a single constraint</p><div class="fullcomment"><div class="comment cmt"><p>Creates a single constraint</p></div><dl class="paramcmts block"><dt class="tparam">C</dt><dd class="cmt"><p>Context</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of Values to validate</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Type of errors</p></dd><dt class="param">fn</dt><dd class="cmt"><p>Validation function</p></dd></dl></div>
     </li><li name="es.weso.validating.Constraint#some" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="some[A,E&gt;:Throwable](vs:Seq[es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="some[A,E&gt;:Throwable](Seq[Validated[A,ConstraintReason,E]]):Validated[A,ConstraintReason,E]"></a>
+      <a id="some[A,E&gt;:es.weso.validating.ConstraintError](vs:Seq[es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
+      <a id="some[A,E&gt;:ConstraintError](Seq[Checked[A,ConstraintReason,E]]):Checked[A,ConstraintReason,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">some</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="vs">vs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.some.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.some.E">E</span>]]</span>)</span><span class="result">: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.some.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.some.E">E</span>]</span>
+        <span class="name">some</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="vs">vs: <span class="extype" name="scala.Seq">Seq</span>[<a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.some.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.some.E">E</span>]]</span>)</span><span class="result">: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.some.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.some.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint$@some[A,E&gt;:Throwable](vs:Seq[es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint$@some[A,E&gt;:es.weso.validating.ConstraintError](vs:Seq[es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -466,18 +483,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="es.weso.validating.Constraint#unsupported" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="unsupported[Ctx,A,R[_],E&gt;:Throwable](msg:String)(implicitevidence$1:cats.Functor[R]):es.weso.validating.Constraint[Ctx,A,E]"></a>
-      <a id="unsupported[Ctx,A,R[_],E&gt;:Throwable](String)(Functor[R]):Constraint[Ctx,A,E]"></a>
+      <a id="unsupported[Ctx,A,R[_],E&gt;:es.weso.validating.ConstraintError](msg:String)(implicitevidence$1:cats.Functor[R]):es.weso.validating.Constraint[Ctx,A,E]"></a>
+      <a id="unsupported[Ctx,A,R[_],E&gt;:ConstraintError](String)(Functor[R]):Constraint[Ctx,A,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unsupported</span><span class="tparams">[<span name="Ctx">Ctx</span>, <span name="A">A</span>, <span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Functor">Functor</span>[<span class="extype" name="es.weso.validating.Constraint.unsupported.R">R</span>]</span>)</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Constraint.unsupported.Ctx">Ctx</span>, <span class="extype" name="es.weso.validating.Constraint.unsupported.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.unsupported.E">E</span>]</span>
+        <span class="name">unsupported</span><span class="tparams">[<span name="Ctx">Ctx</span>, <span name="A">A</span>, <span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Functor">Functor</span>[<span class="extype" name="es.weso.validating.Constraint.unsupported.R">R</span>]</span>)</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Constraint.unsupported.Ctx">Ctx</span>, <span class="extype" name="es.weso.validating.Constraint.unsupported.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.unsupported.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint$@unsupported[Ctx,A,R[_],E&gt;:Throwable](msg:String)(implicitevidence$1:cats.Functor[R]):es.weso.validating.Constraint[Ctx,A,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint$@unsupported[Ctx,A,R[_],E&gt;:es.weso.validating.ConstraintError](msg:String)(implicitevidence$1:cats.Functor[R]):es.weso.validating.Constraint[Ctx,A,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -552,18 +569,18 @@
               
         </dd></dl></div>
     </li><li name="es.weso.validating.Constraint#xor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="xor[A,E&gt;:Throwable](v1:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="xor[A,E&gt;:Throwable](Validated[A,ConstraintReason,E],Validated[A,ConstraintReason,E]):Validated[A,ConstraintReason,E]"></a>
+      <a id="xor[A,E&gt;:es.weso.validating.ConstraintError](v1:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
+      <a id="xor[A,E&gt;:ConstraintError](Checked[A,ConstraintReason,E],Checked[A,ConstraintReason,E]):Checked[A,ConstraintReason,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">xor</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <span class="extype" name="scala.Throwable">Throwable</span></span>]</span><span class="params">(<span name="v1">v1: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.xor.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.xor.E">E</span>]</span>, <span name="v2">v2: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.xor.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.xor.E">E</span>]</span>)</span><span class="result">: <a href="Validated.html" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Constraint.xor.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.xor.E">E</span>]</span>
+        <span class="name">xor</span><span class="tparams">[<span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="v1">v1: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.xor.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.xor.E">E</span>]</span>, <span name="v2">v2: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.xor.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.xor.E">E</span>]</span>)</span><span class="result">: <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.xor.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.xor.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint$@xor[A,E&gt;:Throwable](v1:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Validated[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint$@xor[A,E&gt;:es.weso.validating.ConstraintError](v1:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E],v2:es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
