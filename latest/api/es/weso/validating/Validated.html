@@ -339,18 +339,18 @@ It validates if at least one of the alternatives is validated
               
         </dd></dl></div>
     </li><li name="es.weso.validating.Validated#fold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fold[V](ok:es.weso.validating.Responses[A,R]=&gt;V,err:Seq[E]=&gt;V):V"></a>
-      <a id="fold[V]((Responses[A,R])⇒V,(Seq[E])⇒V):V"></a>
+      <a id="fold[V](ok:es.weso.validating.NDResponse[A,R]=&gt;V,err:Seq[E]=&gt;V):V"></a>
+      <a id="fold[V]((NDResponse[A,R])⇒V,(Seq[E])⇒V):V"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fold</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="ok">ok: (<a href="Responses.html" class="extype" name="es.weso.validating.Responses">Responses</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>]) ⇒ <span class="extype" name="es.weso.validating.Validated.fold.V">V</span></span>, <span name="err">err: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="es.weso.validating.Validated.E">E</span>]) ⇒ <span class="extype" name="es.weso.validating.Validated.fold.V">V</span></span>)</span><span class="result">: <span class="extype" name="es.weso.validating.Validated.fold.V">V</span></span>
+        <span class="name">fold</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="ok">ok: (<a href="NDResponse.html" class="extype" name="es.weso.validating.NDResponse">NDResponse</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>]) ⇒ <span class="extype" name="es.weso.validating.Validated.fold.V">V</span></span>, <span name="err">err: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="es.weso.validating.Validated.E">E</span>]) ⇒ <span class="extype" name="es.weso.validating.Validated.fold.V">V</span></span>)</span><span class="result">: <span class="extype" name="es.weso.validating.Validated.fold.V">V</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Validated@fold[V](ok:es.weso.validating.Responses[A,R]=&gt;V,err:Seq[E]=&gt;V):V" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Validated@fold[V](ok:es.weso.validating.NDResponse[A,R]=&gt;V,err:Seq[E]=&gt;V):V" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -407,18 +407,18 @@ It validates if at least one of the alternatives is validated
     </span>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the value has no errors</p></dd></dl></div>
     </li><li name="es.weso.validating.Validated#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="map[B,R1[_]&gt;:R[_]](f:es.weso.validating.Responses[A,R]=&gt;es.weso.validating.Responses[B,R1])(implicitevidence$2:cats.Functor[R1]):es.weso.validating.Validated[B,R1,E]"></a>
-      <a id="map[B,R1[_]&gt;:R[_]]((Responses[A,R])⇒Responses[B,R1])(Functor[R1]):Validated[B,R1,E]"></a>
+      <a id="map[B,R1[_]&gt;:R[_]](f:es.weso.validating.NDResponse[A,R]=&gt;es.weso.validating.NDResponse[B,R1])(implicitevidence$2:cats.Functor[R1]):es.weso.validating.Validated[B,R1,E]"></a>
+      <a id="map[B,R1[_]&gt;:R[_]]((NDResponse[A,R])⇒NDResponse[B,R1])(Functor[R1]):Validated[B,R1,E]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="B">B</span>, <span name="R1">R1<span class="tparams">[<span name="_">_</span>]</span> &gt;: <span class="extype" name="es.weso.validating.Validated.R">R</span>[_]</span>]</span><span class="params">(<span name="f">f: (<a href="Responses.html" class="extype" name="es.weso.validating.Responses">Responses</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>]) ⇒ <a href="Responses.html" class="extype" name="es.weso.validating.Responses">Responses</a>[<span class="extype" name="es.weso.validating.Validated.map.B">B</span>, <span class="extype" name="es.weso.validating.Validated.map.R1">R1</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Functor">Functor</span>[<span class="extype" name="es.weso.validating.Validated.map.R1">R1</span>]</span>)</span><span class="result">: <a href="" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Validated.map.B">B</span>, <span class="extype" name="es.weso.validating.Validated.map.R1">R1</span>, <span class="extype" name="es.weso.validating.Validated.E">E</span>]</span>
+        <span class="name">map</span><span class="tparams">[<span name="B">B</span>, <span name="R1">R1<span class="tparams">[<span name="_">_</span>]</span> &gt;: <span class="extype" name="es.weso.validating.Validated.R">R</span>[_]</span>]</span><span class="params">(<span name="f">f: (<a href="NDResponse.html" class="extype" name="es.weso.validating.NDResponse">NDResponse</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>]) ⇒ <a href="NDResponse.html" class="extype" name="es.weso.validating.NDResponse">NDResponse</a>[<span class="extype" name="es.weso.validating.Validated.map.B">B</span>, <span class="extype" name="es.weso.validating.Validated.map.R1">R1</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Functor">Functor</span>[<span class="extype" name="es.weso.validating.Validated.map.R1">R1</span>]</span>)</span><span class="result">: <a href="" class="extype" name="es.weso.validating.Validated">Validated</a>[<span class="extype" name="es.weso.validating.Validated.map.B">B</span>, <span class="extype" name="es.weso.validating.Validated.map.R1">R1</span>, <span class="extype" name="es.weso.validating.Validated.E">E</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Validated@map[B,R1[_]&gt;:R[_]](f:es.weso.validating.Responses[A,R]=&gt;es.weso.validating.Responses[B,R1])(implicitevidence$2:cats.Functor[R1]):es.weso.validating.Validated[B,R1,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Validated@map[B,R1[_]&gt;:R[_]](f:es.weso.validating.NDResponse[A,R]=&gt;es.weso.validating.NDResponse[B,R1])(implicitevidence$2:cats.Functor[R1]):es.weso.validating.Validated[B,R1,E]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -510,18 +510,18 @@ It validates if at least one of the alternatives is validated
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="es.weso.validating.Validated#reasons" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="reasons:Option[es.weso.validating.Responses[A,R]]"></a>
-      <a id="reasons:Option[Responses[A,R]]"></a>
+      <a id="reasons:Option[es.weso.validating.NDResponse[A,R]]"></a>
+      <a id="reasons:Option[NDResponse[A,R]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reasons</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Responses.html" class="extype" name="es.weso.validating.Responses">Responses</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>]]</span>
+        <span class="name">reasons</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="NDResponse.html" class="extype" name="es.weso.validating.NDResponse">NDResponse</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Validated@reasons:Option[es.weso.validating.Responses[A,R]]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Validated@reasons:Option[es.weso.validating.NDResponse[A,R]]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -544,18 +544,18 @@ It validates if at least one of the alternatives is validated
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="es.weso.validating.Validated#value" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="value:org.scalactic.Or[es.weso.validating.Responses[A,R],org.scalactic.Every[E]]"></a>
-      <a id="value:Or[Responses[A,R],Every[E]]"></a>
+      <a id="value:org.scalactic.Or[es.weso.validating.NDResponse[A,R],org.scalactic.Every[E]]"></a>
+      <a id="value:Or[NDResponse[A,R],Every[E]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">value</span><span class="result">: <span class="extype" name="org.scalactic.Or">Or</span>[<a href="Responses.html" class="extype" name="es.weso.validating.Responses">Responses</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>], <span class="extype" name="org.scalactic.Every">Every</span>[<span class="extype" name="es.weso.validating.Validated.E">E</span>]]</span>
+        <span class="name">value</span><span class="result">: <span class="extype" name="org.scalactic.Or">Or</span>[<a href="NDResponse.html" class="extype" name="es.weso.validating.NDResponse">NDResponse</a>[<span class="extype" name="es.weso.validating.Validated.A">A</span>, <span class="extype" name="es.weso.validating.Validated.R">R</span>], <span class="extype" name="org.scalactic.Every">Every</span>[<span class="extype" name="es.weso.validating.Validated.E">E</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Validated@value:org.scalactic.Or[es.weso.validating.Responses[A,R],org.scalactic.Every[E]]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Validated@value:org.scalactic.Or[es.weso.validating.NDResponse[A,R],org.scalactic.Every[E]]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

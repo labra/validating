@@ -51,7 +51,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Defines a validation response</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of values that have been validated</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>container of the response (it must be an instance of applicative)</p></dd><dt class="param">response</dt><dd class="cmt"><p>response value</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -90,7 +90,7 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="es.weso.validating.Response#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="es.weso.validating.Response#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(response:R[A])(implicitevidence$1:cats.Applicative[R]):es.weso.validating.Response[A,R]"></a>
       <a id="&lt;init&gt;:Response[A,R]"></a>
       <h4 class="signature">
@@ -106,7 +106,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">response</dt><dd class="cmt"><p>response value</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -281,7 +281,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="es.weso.validating.Response#mapValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="es.weso.validating.Response#mapValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapValue[B](f:A=&gt;B):es.weso.validating.Response[B,R]"></a>
       <a id="mapValue[B]((A)⇒B):Response[B,R]"></a>
       <h4 class="signature">
@@ -297,8 +297,8 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="es.weso.validating.Response#merge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Applies a function to the response value</p><div class="fullcomment"><div class="comment cmt"><p>Applies a function to the response value</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>new type of response value</p></dd><dt class="param">f</dt><dd class="cmt"><p>function that is applied</p></dd></dl></div>
+    </li><li name="es.weso.validating.Response#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="merge(responses:es.weso.validating.Response[Seq[A],R]):es.weso.validating.Response[Seq[A],R]"></a>
       <a id="merge(Response[Seq[A],R]):Response[Seq[A],R]"></a>
       <h4 class="signature">
@@ -314,7 +314,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Merges a sequence of responses with the current response</p><div class="fullcomment"><div class="comment cmt"><p>Merges a sequence of responses with the current response</p></div><dl class="paramcmts block"><dt class="param">responses</dt><dd class="cmt"><p>a response that contains a sequence of values</p></dd><dt>returns</dt><dd class="cmt"><p>a response that contains a sequence of values formed by appending the current value to the sequence of values</p></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -382,7 +382,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">response value</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
