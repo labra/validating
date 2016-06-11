@@ -47,11 +47,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Checked</span><span class="tparams">[<span name="A">A</span>, <span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="E">+E</span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Checked</span><span class="tparams">[<span name="A">A</span>, <span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="E">+E</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="org.scalactic.Or">Or</span>[<a href="NDResponse.html" class="extype" name="es.weso.validating.NDResponse">NDResponse</a>[<span class="extype" name="es.weso.validating.Checked.A">A</span>, <span class="extype" name="es.weso.validating.Checked.R">R</span>], <span class="extype" name="org.scalactic.Every">Every</span>[<span class="extype" name="es.weso.validating.Checked.E">E</span>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <span class="extype" name="cats.Functor">Functor</span>[<span class="extype" name="es.weso.validating.Checked.R">R</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Checked defines values that have been validated
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Checked defines values that have been checked. A checked value can contain a non-deterministic response
+or a list of errors.
 </p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of values</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>Explanation type of validation</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Error type</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -89,7 +90,27 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="es.weso.validating.Checked#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(value:org.scalactic.Or[es.weso.validating.NDResponse[A,R],org.scalactic.Every[E]])(implicitevidence$1:cats.Functor[R]):es.weso.validating.Checked[A,R,E]"></a>
+      <a id="&lt;init&gt;:Checked[A,R,E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Checked</span><span class="params">(<span name="value">value: <span class="extype" name="org.scalactic.Or">Or</span>[<a href="NDResponse.html" class="extype" name="es.weso.validating.NDResponse">NDResponse</a>[<span class="extype" name="es.weso.validating.Checked.A">A</span>, <span class="extype" name="es.weso.validating.Checked.R">R</span>], <span class="extype" name="org.scalactic.Every">Every</span>[<span class="extype" name="es.weso.validating.Checked.E">E</span>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.Functor">Functor</span>[<span class="extype" name="es.weso.validating.Checked.R">R</span>]</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.Checked@&lt;init&gt;(value:org.scalactic.Or[es.weso.validating.NDResponse[A,R],org.scalactic.Every[E]])(implicitevidence$1:cats.Functor[R]):es.weso.validating.Checked[A,R,E]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p>
+    </li></ol>
+            </div>
 
         
 

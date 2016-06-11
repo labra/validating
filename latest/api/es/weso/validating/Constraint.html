@@ -47,7 +47,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Constraint</span><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>, <span name="E">+E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Constraint</span><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>, <span name="E">+E &lt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -99,7 +99,24 @@ validated value
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="es.weso.validating.Constraint#validate" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="es.weso.validating.Constraint#id" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="id:String"></a>
+      <a id="id:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">id</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.Constraint@id:String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="es.weso.validating.Constraint#validate" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="validate:(A,Context)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
       <a id="validate:(A,Context)⇒Checked[A,ConstraintReason,E]"></a>
       <h4 class="signature">

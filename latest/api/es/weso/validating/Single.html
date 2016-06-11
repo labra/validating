@@ -45,14 +45,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Single</span><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>, <span name="E">E &gt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="params">(<span name="validate">validate: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Single.E">E</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.E">E</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Single</span><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>]</span><span class="params">(<span name="validate">validate: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A single constraint which is not composed of other constraints
-</p></div><dl class="paramcmts block"><dt class="tparam">C</dt><dd class="cmt"><p>Context</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of Values to validate</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Type of errors</p></dd></dl><div class="toggleContainer block">
+</p></div><dl class="paramcmts block"><dt class="tparam">C</dt><dd class="cmt"><p>Context</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of Values to validate</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.E">E</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -90,18 +90,18 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="es.weso.validating.Single#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Single[C,A,E]"></a>
-      <a id="&lt;init&gt;:Single[C,A,E]"></a>
+      <a id="&lt;init&gt;(validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError]):es.weso.validating.Single[C,A]"></a>
+      <a id="&lt;init&gt;:Single[C,A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Single</span><span class="params">(<span name="validate">validate: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Single.E">E</span>]</span>)</span>
+        <span class="name">Single</span><span class="params">(<span name="validate">validate: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Single@&lt;init&gt;(validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]):es.weso.validating.Single[C,A,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Single@&lt;init&gt;(validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError]):es.weso.validating.Single[C,A]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -263,6 +263,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="es.weso.validating.Single#id" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="id:String"></a>
+      <a id="id:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">id</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.Single@id:String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="es.weso.validating.Single">Single</a> → <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -348,19 +365,36 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="es.weso.validating.Single#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.Single@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="es.weso.validating.Single">Single</a> → AnyRef → Any</dd></dl></div>
     </li><li name="es.weso.validating.Single#validate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="validate:(A,C)⇒Checked[A,ConstraintReason,E]"></a>
+      <a id="validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError]"></a>
+      <a id="validate:(A,C)⇒Checked[A,ConstraintReason,ConstraintError]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Single.E">E</span>]</span>
+        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Single@validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Single@validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -452,7 +486,7 @@
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="es.weso.validating.Constraint">
-              <h3>Inherited from <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <span class="extype" name="es.weso.validating.Single.E">E</span>]</h3>
+              <h3>Inherited from <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.Single.C">C</span>, <span class="extype" name="es.weso.validating.Single.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
