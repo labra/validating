@@ -47,13 +47,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Constraint</span><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>, <span name="E">+E &lt;: <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Constraint</span><span class="tparams">[<span name="Context">Context</span>, <span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A constraint can be seen as a function from a context and a value that returns a
 validated value
-</p></div><dl class="paramcmts block"><dt class="tparam">Context</dt><dd class="cmt"><p>Type of context in which the constraint is evaluated</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of values that the constraint validates</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>Type of violation errors</p></dd></dl><div class="toggleContainer block">
+</p></div><dl class="paramcmts block"><dt class="tparam">Context</dt><dd class="cmt"><p>Type of context in which the constraint is evaluated</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of values that the constraint validates</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -117,18 +117,18 @@ validated value
     </span>
       
     </li><li name="es.weso.validating.Constraint#validate" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="validate:(A,Context)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]"></a>
-      <a id="validate:(A,Context)⇒Checked[A,ConstraintReason,E]"></a>
+      <a id="validate:(A,Context)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError[A]]"></a>
+      <a id="validate:(A,Context)⇒Checked[A,ConstraintReason,ConstraintError[A]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.Context">Context</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <span class="extype" name="es.weso.validating.Constraint.E">E</span>]</span>
+        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <span class="extype" name="es.weso.validating.Constraint.Context">Context</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.Constraint.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.Constraint.A">A</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.Constraint@validate:(A,Context)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,E]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.Constraint@validate:(A,Context)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError[A]]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

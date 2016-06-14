@@ -45,14 +45,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">All_SomeNotValid</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">All_SomeNotValid</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="notValids">notValids: <span class="extype" name="scala.Seq">Seq</span>[<a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.All_SomeNotValid.A">A</span>]]</span>)</span><span class="result"> extends <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.All_SomeNotValid.A">A</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Constraint violation when there was an All constraint but some are not valid
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.All_SomeNotValid.A">A</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -90,18 +90,18 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="es.weso.validating.All_SomeNotValid#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(msg:String):es.weso.validating.All_SomeNotValid"></a>
-      <a id="&lt;init&gt;:All_SomeNotValid"></a>
+      <a id="&lt;init&gt;(msg:String,notValids:Seq[es.weso.validating.ConstraintError[A]]):es.weso.validating.All_SomeNotValid[A]"></a>
+      <a id="&lt;init&gt;:All_SomeNotValid[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">All_SomeNotValid</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">All_SomeNotValid</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="notValids">notValids: <span class="extype" name="scala.Seq">Seq</span>[<a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.All_SomeNotValid.A">A</span>]]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.All_SomeNotValid@&lt;init&gt;(msg:String):es.weso.validating.All_SomeNotValid" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.All_SomeNotValid@&lt;init&gt;(msg:String,notValids:Seq[es.weso.validating.ConstraintError[A]]):es.weso.validating.All_SomeNotValid[A]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -280,7 +280,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="es.weso.validating.All_SomeNotValid#msg" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="es.weso.validating.All_SomeNotValid#msg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="msg:String"></a>
       <a id="msg:String"></a>
       <h4 class="signature">
@@ -296,7 +296,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="es.weso.validating.All_SomeNotValid">All_SomeNotValid</a> → <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -314,6 +314,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="es.weso.validating.All_SomeNotValid#notValids" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="notValids:Seq[es.weso.validating.ConstraintError[A]]"></a>
+      <a id="notValids:Seq[ConstraintError[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notValids</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.All_SomeNotValid.A">A</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.validating.All_SomeNotValid@notValids:Seq[es.weso.validating.ConstraintError[A]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -452,7 +469,7 @@
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="es.weso.validating.ConstraintError">
-              <h3>Inherited from <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a></h3>
+              <h3>Inherited from <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.All_SomeNotValid.A">A</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

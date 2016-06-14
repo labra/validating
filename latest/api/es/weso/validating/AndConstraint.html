@@ -45,14 +45,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">AndConstraint</span><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">AndConstraint</span><span class="tparams">[<span name="C">C</span>, <span name="A">A</span>]</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]</span>)</span><span class="result"> extends <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Given two constraints, creates a constraint that is satisfied when both are satisfied
 </p></div><dl class="paramcmts block"><dt class="tparam">C</dt><dd class="cmt"><p>Context</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>Type of Values to validate</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -90,7 +90,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="es.weso.validating.AndConstraint#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(c1:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError],c2:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError]):es.weso.validating.AndConstraint[C,A]"></a>
+      <a id="&lt;init&gt;(c1:es.weso.validating.Constraint[C,A],c2:es.weso.validating.Constraint[C,A]):es.weso.validating.AndConstraint[C,A]"></a>
       <a id="&lt;init&gt;:AndConstraint[C,A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,10 +98,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">AndConstraint</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>)</span>
+        <span class="name">AndConstraint</span><span class="params">(<span name="c1">c1: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]</span>, <span name="c2">c2: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.AndConstraint@&lt;init&gt;(c1:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError],c2:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError]):es.weso.validating.AndConstraint[C,A]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.AndConstraint@&lt;init&gt;(c1:es.weso.validating.Constraint[C,A],c2:es.weso.validating.Constraint[C,A]):es.weso.validating.AndConstraint[C,A]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -184,35 +184,35 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="es.weso.validating.AndConstraint#c1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="c1:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError]"></a>
-      <a id="c1:Constraint[C,A,ConstraintError]"></a>
+      <a id="c1:es.weso.validating.Constraint[C,A]"></a>
+      <a id="c1:Constraint[C,A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">c1</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>
+        <span class="name">c1</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.AndConstraint@c1:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.AndConstraint@c1:es.weso.validating.Constraint[C,A]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="es.weso.validating.AndConstraint#c2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="c2:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError]"></a>
-      <a id="c2:Constraint[C,A,ConstraintError]"></a>
+      <a id="c2:es.weso.validating.Constraint[C,A]"></a>
+      <a id="c2:Constraint[C,A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">c2</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>
+        <span class="name">c2</span><span class="result">: <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.AndConstraint@c2:es.weso.validating.Constraint[C,A,es.weso.validating.ConstraintError]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.AndConstraint@c2:es.weso.validating.Constraint[C,A]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -417,18 +417,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="es.weso.validating.AndConstraint">AndConstraint</a> → AnyRef → Any</dd></dl></div>
     </li><li name="es.weso.validating.AndConstraint#validate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError]"></a>
-      <a id="validate:(A,C)⇒Checked[A,ConstraintReason,ConstraintError]"></a>
+      <a id="validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError[A]]"></a>
+      <a id="validate:(A,C)⇒Checked[A,ConstraintReason,ConstraintError[A]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</span>
+        <span class="name">validate</span><span class="result">: (<span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <span class="extype" name="es.weso.validating.AndConstraint.C">C</span>) ⇒ <a href="Checked.html" class="extype" name="es.weso.validating.Checked">Checked</a>[<span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintReason.html" class="extype" name="es.weso.validating.ConstraintReason">ConstraintReason</a>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>[<span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.validating.AndConstraint@validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError]" title="Permalink" target="_top">
+      <a href="../../../index.html#es.weso.validating.AndConstraint@validate:(A,C)=&gt;es.weso.validating.Checked[A,es.weso.validating.ConstraintReason,es.weso.validating.ConstraintError[A]]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -520,7 +520,7 @@
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="es.weso.validating.Constraint">
-              <h3>Inherited from <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>, <a href="ConstraintError.html" class="extype" name="es.weso.validating.ConstraintError">ConstraintError</a>]</h3>
+              <h3>Inherited from <a href="Constraint.html" class="extype" name="es.weso.validating.Constraint">Constraint</a>[<span class="extype" name="es.weso.validating.AndConstraint.C">C</span>, <span class="extype" name="es.weso.validating.AndConstraint.A">A</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
