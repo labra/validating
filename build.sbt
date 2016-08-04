@@ -7,16 +7,23 @@ organization := "es.weso"
 
 name := "validating"
 
-version := "0.0.11"
+version := "0.0.14"
 
 scalaVersion := "2.11.8"
 
 publishMavenStyle := true
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %%% "scalatest" % "3.0.0-RC2" ,
-  "org.typelevel" %% "cats" % "0.6.0"
+  "org.scalatest" %%% "scalatest" % "3.0.0-RC2" % "test",
+  "org.typelevel" %% "cats" % "0.6.1",
+  "org.atnos" %% "eff-cats" % "1.7.5"
   )
+
+// to write types like Reader[String, ?]
+addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1")
+
+// to get types like Reader[String, ?] (with more than one type parameter) correctly inferred
+addCompilerPlugin("com.milessabin" % "si2712fix-plugin_2.11.8" % "1.2.0")
 
 bintrayRepository in bintray := "weso-releases"
 

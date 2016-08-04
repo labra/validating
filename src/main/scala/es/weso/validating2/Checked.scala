@@ -1,49 +1,31 @@
 package es.weso.validating2
+import cats._, data._
+import org.atnos.eff._, all._
+import org.atnos.eff.syntax.all._
 
-import cats.data._
-import simulacrum._
+trait Checked {
+  type S // State 
+  type E // Errors
+  type C // Context
 
-import cats.data.Validated._
+  // With this import we use list for non determinism 
+  import cats.std.list._
 
-import es.weso.validating.NDResponse
+  type ResultR[A] =  List[Xor[NonEmptyList[E],(A, S)]]
+  
+  def isOK[A](r: ResultR[A]): Boolean = !r.isEmpty  
+  
+  type Effects =  
+    Reader[C,?] |:
+    State[S,?] |:
+    Validate[E, ?] |:
+    Choose |: 
+    Eval |:
+    NoEffect
 
-trait Checked[A] {
-  def isOK: Boolean
-  def errors: Seq[CheckError[A]]
-  def okReasons: Seq[Reason[A]]
-  def addError(e: CheckError[A]): Checked[A]
-  def ok(x:A, msg: String): Checked[A]
-}
+ type Check[A] = Eff[Effects,A]
 
-trait CheckError[A] {
-  def value: A
-  def errorCause: String
-}
-
-trait Reason[A] {
-  def value: A
-  def reason: String
-  def reason(value: A, msg: String): Reason[A]
-}
-
-case class CheckedImpl[A] private (value: Validated[NonEmptyStream[CheckError[A]], NonEmptyStream[Reason[A]]])
- extends Checked[A] {
-  def addError(e: CheckError[A]): CheckedImpl[A] = ???
-  def isOK = value.isValid
-  def errors = value.fold(es => es.head +: es.tail, _ => Stream())
-  def okReasons = value.fold(es => Stream(), vs => vs.head +: vs.tail)
-  def ok(x:A, msg:String) = ??? // valid(reason(x,msg))
-}
-
-case class ReasonImpl[A](value: A, reason: String) extends Reason[A] {
-  def reason(value: A, reason: String): Reason[A] = ReasonImpl(value,reason)
-}
-
-case class CheckErrorImpl[A](value:A, errorCause: String) extends CheckError[A]
-
-
-object Checked {
-
-  def ok[A](x:A, msg: String): Checked[A] = ??? //
-
+ def runner[A](ctx: C, state: S, c: Check[A]) : ResultR[A] = 
+   c.runReader(ctx).runState(state).runNel.runChoose.runEval.run
+  
 }

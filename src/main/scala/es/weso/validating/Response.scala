@@ -1,59 +1,43 @@
 package es.weso.validating
 
-import cats._
-import cats.implicits._
-
 /**
  * Defines a validation response
  * @tparam A type of values that have been validated
  * @tparam R container of the response (it must be an instance of applicative)
  * @param response response value
  */
-case class Response[A,R[_]:Applicative](response: R[A]) {
-  
+case class Response[A,B](value: A, response: B) {
+
+  def map2[C,D](f: A => C, g: B => D): Response[C,D] = {
+    Response(
+      value = f(value),
+      response = g(response)
+    )
+  }  
   /**
-   * Applies a function to the response value
-   * @tparam B new type of response value
+   * Applies a function to the value
+   * @tparam C new type of response value
    * @param f function that is applied
    */
-  def mapValue[B](f: A => B): Response[B, R] = {
-    Response(response = implicitly[Functor[R]].map(response)(f))  
+  def mapValue[C](f: A => C): Response[C, B] = {
+    this.copy(value = f(value))
   }
+
   
   /**
-   * Merges a sequence of responses with the current response
-   * @param responses a response that contains a sequence of values
-   * @return a response that contains a sequence of values formed by appending the current value to the sequence of values 
+   * Applies a function to the value
+   * @tparam C new type of response value
+   * @param f function that is applied
    */
-  def merge(responses: Response[Seq[A],R]): Response[Seq[A],R] = {
-    val r : R[A] = response
-    val rs : R[Seq[A]] = responses.response
-    def add(p:(A,Seq[A])):Seq[A] = p._1 +: p._2
-    val p : R[Seq[A]] = r.product(rs).map(add)
-    Response(p)
+  def mapResponse[C](f: B => C): Response[A, C] = {
+    this.copy(response = f(response))
   }
-  
+
   override def toString:String = {
-    s"Response[$response]"
+    s"Response[$value,$response]"
   }
 }
 
 object Response {
 
-  /**
-   * Add two sequence of response values
-   * @tparam A type of values
-   * @tparam R type of response containers 
-   * @param rs1 first sequence of response values
-   * @param rs2 second sequence of response values
-   * @return sequence of response values formed by concatenating both rs1 and rs2 
-   */
-  def add[A,R[_]:Applicative](
-      rs1: Response[Seq[A],R], rs2: Response[Seq[A],R]): Response[Seq[A],R] = {
-    val r1 : R[Seq[A]] = rs1.response
-    val r2 : R[Seq[A]] = rs2.response
-    def add(p:(Seq[A],Seq[A])):Seq[A] = p._1 ++ p._2
-    val p : R[Seq[A]] = r1.product(r2).map(add)
-    Response(p)
-  }
 }

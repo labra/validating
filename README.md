@@ -18,6 +18,11 @@ See ScalaDoc:
 * [ScalaDoc](http://labra.github.io/validating/latest/api/)
 * [WebPage](http://labra.github.io/validating/)
 
+# Related links
+* [Unified Data Validation Library](https://github.com/jto/validation) is a unification of 
+   [Play's Form Validation API](https://www.playframework.com/documentation/2.3.x/ScalaForms) and
+   [Json validation API](https://www.playframework.com/documentation/2.3.x/ScalaJsonCombinators). 
+   The [Documentation](http://jto.github.io/validation/docs/book/) is very nice.
 
 # Author
 

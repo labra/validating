@@ -1,6 +1,8 @@
 package es.weso.validating
+import cats._
+import cats.implicits._
 import Constraint._
-import Checked._
+import CheckedSub._
 import ConstraintReason._
 import org.scalatest._
 
@@ -8,32 +10,33 @@ class ConstraintTest extends FunSpec with Matchers with OptionValues {
 
   describe("Constraint") {
 
-
     // Several constraints
-    val isEven: Constraint[Seq[Int], Int] = single((x,ctx) =>
-      if (x % 2 == 0) ok(SingleReason(x, "ok even")) else errString("not even"))
+    val isEven: Constraint[Seq[Int], Int, Option[Int]] = single((x,ctx,r) =>
+      if (x % 2 == 0) okSingle(x,Some(x),"even") 
+      else errString(x,"not even"))
 
-    val isPositive: Constraint[Seq[Int], Int] = Single((x,ctx) =>
-      if (x > 0) ok(SingleReason(x, "ok pos")) else errString("not positive"))
+    val isPos: Constraint[Seq[Int], Int,Option[Int]] = single((x,ctx,r) =>
+      if (x > 0) okSingle(x, Some(x), "ok pos") 
+      else errString(x,"not positive"))
 
-    val isBiggest: Constraint[Seq[Int], Int] = Single((x,ctx) => {
+    val isBiggest: Constraint[Seq[Int], Int, Option[Int]] = single((x,ctx,r) => {
       val biggest = ctx.max
-      if (x == biggest) ok(SingleReason(x, "biggest"))
-      else errString(s"$x is not the biggest")
+      if (x == biggest) okSingle(x, None, "biggest")
+      else errString(x, s"$x is not the biggest")
     })
 
     describe("check a constraint") {
       it("should be able to check biggest ok") {
-        val check = isBiggest.validate(4,Seq(2, 3, 4))
+        val check = isBiggest.validate(4,Seq(2, 3, 4),None)
         check.isOK should be(true)
       }
 
       it("should be able to check biggest failing") {
-        val check = isBiggest.validate(3,Seq(2, 3, 4))
+        val check = isBiggest.validate(3,Seq(2, 3, 4),None)
         check.isOK should be(false)
       }
     }
-
+/*
     describe("some") {
 
       it("should be able to check some when all pass") {
@@ -88,30 +91,30 @@ class ConstraintTest extends FunSpec with Matchers with OptionValues {
       }
 
     }
-
+*/
     describe("all") {
       it("should be able to check all when all pass") {
-        val c = All(Seq(isEven, isPositive))
-        val validated = c.validate(2,Seq())
+        val c = All(Seq(isEven, isPos))
+        val validated = c.validate(2,Seq(),None)
         validated.isOK should be(true)
-        val r1: ConstraintReason[Int] = SingleReason(2,"ok even")
-        val r2: ConstraintReason[Int] = SingleReason(2,"ok pos")
-        val expected : Response[Int,ConstraintReason] = Response(AllReason(Seq(r2, r1)))
-        val vs = validated.reasons.value.values
-        vs should contain(expected)
+        val r1: ConstraintReason[Int] = SingleReason("ok even")
+        val r2: ConstraintReason[Int] = SingleReason("ok pos")
+        val vs = validated.responses
+        val expected: Option[Int] = Some(4)
+        vs should contain only(expected)
       }
 
       it("should be able to fail to validate all when only one pass") {
-        val c = All(Seq(isEven, isPositive))
-        val validated = c.validate(3,Seq())
+        val c = All(Seq(isEven, isPos))
+        val validated = c.validate(3,Seq(),None)
         validated.isOK should be(false)
         val e = validated.errors.head
         e shouldBe a [All_SomeNotValid[_]]
       }
 
       it("should be able to fail validation of all when none pass") {
-        val c = All(Seq(isEven, isPositive))
-        val validated = c.validate(-3,Seq())
+        val c = All(Seq(isEven, isPos))
+        val validated = c.validate(-3,Seq(),None)
         validated.isOK should be(false)
         val e = validated.errors.head
         e shouldBe a [All_SomeNotValid[_]]
@@ -120,12 +123,12 @@ class ConstraintTest extends FunSpec with Matchers with OptionValues {
     }
     
   describe("or") {
-    val c = OrConstraint(isEven,isPositive)
+    val c = OrConstraint(isEven,isPos)
     
     it("Should be able to pass when both pass") {
-      val validated = c.validate(2,Seq())
+      val validated = c.validate(2,Seq(),None)
       validated.isOK should be(true)
-      val reasons = validated.reasons.value
+      // val reasons = validated.reasons.value
       // Add test to check that it starts by SomeReason...
     }
   }
@@ -148,24 +151,23 @@ class ConstraintTest extends FunSpec with Matchers with OptionValues {
     }
   }
 
-  val even : Int => Checked[Int,ConstraintReason,ConstraintError[Int]] = cond(_ % 2 == 0, "even")
-  val odd : Int => Checked[Int,ConstraintReason,ConstraintError[Int]] = cond(_ % 2 != 0, "odd")
-  val positive : Int => Checked[Int,ConstraintReason,ConstraintError[Int]] = cond(_ > 0, "positive")
-  val negative : Int => Checked[Int,ConstraintReason,ConstraintError[Int]] = cond(_ < 0, "positive")
+  val even : Int => CheckedVal[Int,Option[Int]] = cond(_ % 2 == 0, Some(1), "even")
+  val odd : Int => CheckedVal[Int,Option[Int]] = cond(_ % 2 != 0, Some(1), "odd")
+  val positive : Int => CheckedVal[Int,Option[Int]] = cond(_ > 0, Some(1), "positive")
+  val negative : Int => CheckedVal[Int,Option[Int]] = cond(_ < 0, Some(1), "negative")
 
   describe("checkValueAll") {
-
     it("checkValueAll should pass 3 with odd and positive") {
-      checkValueAll(3, Seq(odd, positive)).isOK should be(true)
+      Constraint.checkAll(3, Seq(odd, positive)).isOK should be(true)
     }
     it("checkValueAll should not pass 3 with odd and negative") {
-      checkValueAll(3, Seq(odd, negative)).isOK should be(false)
+      Constraint.checkAll(3, Seq(odd, negative)).isOK should be(false)
     }
     it("checkValueAll should not pass 3 with even and positive") {
-      checkValueAll(3, Seq(even, positive)).isOK should be(false)
+      Constraint.checkAll(3, Seq(even, positive)).isOK should be(false)
     }
     it("checkValueAll should not pass 3 with even and negative") {
-      checkValueAll(3, Seq(even, negative)).isOK should be(false)
+      Constraint.checkAll(3, Seq(even, negative)).isOK should be(false)
     }
 
     it("should allow different errors") {
@@ -187,7 +189,43 @@ class ConstraintTest extends FunSpec with Matchers with OptionValues {
       checkSome(3, Seq(even, positive)).isOK should be(true)
     }
     it("should not pass 3 with even and negative") {
-      checkValueAll(3, Seq(even, negative)).isOK should be(false)
+      Constraint.checkAll(3, Seq(even, negative)).isOK should be(false)
+    } 
+  } 
+  
+  
+  describe("Combine all") {
+    it("should check if a list of integers is positive when all are positive") {
+     val vs: Seq[Int] = Seq(1,2,3)
+     val current: Option[Int] = Some(0)
+     val comb: (Int,Option[Int]) => CheckedVal[String,Option[Int]] = { (x,o) =>
+       if (x >= 0) {
+         okSingle(x.toString, Some(x),s"$x is positive")
+       } else 
+         errString(x.toString,s"$x is negative")
+     }
+    
+     val result : CheckedVal[String,Option[Int]] = combineAll(vs,current,comb)
+     result.isOK should be(true)
+     result.responses should contain only(Some(6))
+    }
+
+    it("should check if a list of integers is positive when one is negative") {
+     val vs: Seq[Int] = Seq(1,-2,3)
+     val current: Option[Int] = Some(0)
+     val comb: (Int,Option[Int]) => CheckedVal[String,Option[Int]] = { (x,o) =>
+       if (x >= 0) {
+         okSingle(x.toString, Some(x),s"$x is positive")
+       } else 
+         errString(x.toString,s"$x is negative")
+     }
+    
+     val result : CheckedVal[String,Option[Int]] = combineAll(vs,current,comb)
+     result.isOK should be(false)
+     result.responses shouldBe empty
     }
   }
+  
 }
+
+
