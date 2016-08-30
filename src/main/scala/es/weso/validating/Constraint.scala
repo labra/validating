@@ -13,6 +13,7 @@ import ConstraintReason._
  * @tparam A Type of values that the constraint validates
  *
  */
+@deprecated
 sealed abstract class Constraint[Context, A, R] {
   def id: String
   def validate: (A, Context, R) => CheckedVal[A, R]

@@ -1,0 +1,35 @@
+package examples
+import cats._, data._
+import org.atnos.eff._, all._
+import org.atnos.eff.syntax.all._
+
+trait Typing[Key,Value] {
+  
+  def add(k: Key,v: Value): Typing[Key,Value]
+
+}
+
+case class TypingMap[Key,Value](m: Map[Key,Value]) extends Typing[Key,Value] {
+    override def add(k: Key, v: Value): Typing[Key,Value] =
+      TypingMap(m.updated(k,v))
+}
+
+
+object Typing {
+  def empty[Key,Value]: Typing[Key,Value] = TypingMap(Map())
+}
+
+
+trait program {
+  type MyTyping = Typing[String,String]
+    
+  type Comput = Fx.fx2[State[MyTyping,?],Eval]
+  type Checker[A] = Eff[Comput,A]
+  
+  def check: Checker[Unit] = for {
+    _ <- modify[Comput,MyTyping](t => t.add("x", "y"))
+  } yield ()
+
+  def runner = check.runState(Typing.empty[String,String]).runEval.run
+  
+}

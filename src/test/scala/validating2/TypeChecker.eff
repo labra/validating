@@ -31,23 +31,23 @@ class TypeCheckerTest extends FunSpec with Matchers with OptionValues with Check
     getState
   
   def err(e: ViolationError): Check[S] = for {
-    s <- get[Effects,S]
-    _ <- wrong[Effects,ViolationError](e)
+    s <- get[Comput,S]
+    _ <- wrong[Comput,ViolationError](e)
   } yield(s)
   
   def getGraph: Check[Graph] = for {
-    ctx <- ask[Effects,C]
+    ctx <- ask[Comput,C]
   } yield graph(ctx)
     
   def getShapes: Check[Shapes] = for {
-    ctx <- ask[Effects,C]
+    ctx <- ask[Comput,C]
   } yield shape(ctx)
   
   def getNeighbours(node: Node): Check[Set[(Edge,Node)]] = for {
     g <- getGraph
   } yield neigh(node,g)
   
-  def getState: Check[S] = get[Effects,S]
+  def getState: Check[S] = get[Comput,S]
 
   def check(node: Node, label: Label): Check[S] = for {
     ns <- getNeighbours(node)
@@ -68,8 +68,9 @@ class TypeCheckerTest extends FunSpec with Matchers with OptionValues with Check
   // Probably define another combinator...
   def getShape(label: Label): Check[Shape] = for {
     shapes <- getShapes
-    _ <- validateOption[Effects, ViolationError, Shape](shapes.get(label),s"Shape not found for label $label") 
+    _ <- validateOption[Comput, ViolationError, Shape](shapes.get(label),s"Shape not found for label $label") 
   } yield shapes.get(label).get
+  
   
   describe("Simple Type Checker using the validating library") {
     it("Can check an empty shape") {
@@ -82,6 +83,8 @@ class TypeCheckerTest extends FunSpec with Matchers with OptionValues with Check
       val ok: Boolean = isOK(result)
       ok should be(true)
     }
+    
+    
 
    
   }

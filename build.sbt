@@ -7,23 +7,20 @@ organization := "es.weso"
 
 name := "validating"
 
-version := "0.0.14"
+version := "0.0.16"
 
 scalaVersion := "2.11.8"
 
 publishMavenStyle := true
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %%% "scalatest" % "3.0.0-RC2" % "test",
-  "org.typelevel" %% "cats" % "0.6.1",
-  "org.atnos" %% "eff-cats" % "1.7.5"
-  )
-
-// to write types like Reader[String, ?]
-addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1")
-
-// to get types like Reader[String, ?] (with more than one type parameter) correctly inferred
-addCompilerPlugin("com.milessabin" % "si2712fix-plugin_2.11.8" % "1.2.0")
+  compilerPlugin("org.spire-math" %% "kind-projector"   % "0.8.0")
+, compilerPlugin("com.milessabin" % "si2712fix-plugin" % "1.2.0" cross CrossVersion.full)
+, compilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
+, "org.scalatest" %%% "scalatest" % "3.0.0-RC2" % "test"
+, "org.typelevel" %% "cats" % "0.7.0"
+, "org.atnos" %% "eff-cats" % "2.0.0-RC6"
+)
 
 bintrayRepository in bintray := "weso-releases"
 
@@ -62,9 +59,18 @@ lazy val publishSettings = Seq(
     </developers>
   ),
   scalacOptions in (Compile,doc) ++= Seq(
-    "-Xfatal-warnings",
-    "-doc-source-url", scmInfo.value.get.browseUrl + "/tree/master€{FILE_PATH}.scala",
-    "-sourcepath", baseDirectory.in(LocalRootProject).value.getAbsolutePath,
-    "-diagrams"
+      "-language:existentials"
+    , "-language:higherKinds"
+    , "-language:implicitConversions"
+    , "-unchecked"
+    , "-Xfatal-warnings"
+    , "-Xlint"
+    , "-Yno-adapted-args"
+    , "-Ywarn-dead-code"
+    , "-Ywarn-numeric-widen"
+    , "-Ywarn-value-discard"
+    , "-doc-source-url", scmInfo.value.get.browseUrl + "/tree/master€{FILE_PATH}.scala"
+    , "-sourcepath", baseDirectory.in(LocalRootProject).value.getAbsolutePath
+    , "-diagrams"
   )
 )

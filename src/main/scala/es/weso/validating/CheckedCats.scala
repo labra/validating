@@ -37,7 +37,7 @@ object CheckedCats extends CheckedOps {
   }
 
  def err[A, R, E](v: Option[A], e: E): Checked[A, R, E] =
-    CheckedCats(v, Invalid(NonEmptyList(e)))
+    CheckedCats(v, Invalid(NonEmptyList.fromList(List(e)).get))
 
  def errs[A, R, E](v: Option[A], es: Seq[E]): Checked[A, R, E] = {
    require(!es.isEmpty)

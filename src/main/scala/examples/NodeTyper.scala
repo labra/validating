@@ -16,11 +16,7 @@ type Typing = Map[Label, Set[Label]]
 type Violation = String
 type Action = List[String]
 
-type Result = Reader[Context,?] |:
-              State[Typing, ?] |:
-              Validate[Violation, ?] |:
-              Eval |: 
-              NoEffect
+type Result = Fx.fx4[Reader[Context,?], State[Typing, ?], Validate[Violation, ?], Eval] 
 
 def addType(node: Node, label: Label, typing: Typing): Typing =
   typing + (node -> Set(label))
@@ -37,13 +33,7 @@ val typing0 : Typing = Map()
 val action0 : Action = List()
 val runner0 = checker("x","S").runReader(context0).runState(typing0).runNel.runEval.run
 
-type R1 = Reader[Context,?] |:
-          State[Action,?] |:
-          State[Typing, ?] |:
-          Validate[Violation, ?] |:
-          Choose |: 
-          Eval |:
-          NoEffect
+type R1 = Fx.fx6[Reader[Context,?], State[Action,?], State[Typing, ?], Validate[Violation, ?], Choose, Eval]
           
 def check(v: Int): Eff[R1,String] = 
   v match {
@@ -63,7 +53,7 @@ def check(v: Int): Eff[R1,String] =
   }
 
 
-import cats.std.list._
+import cats.instances.list._
 
 type ResultR[A] =  List[Xor[NonEmptyList[Violation],((A, Action), Typing)]]
 def runner1(n:Int): ResultR[String] = 

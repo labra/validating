@@ -1,7 +1,7 @@
 package es.weso.validating
 import cats._
 import cats.syntax.all._
-import cats.std.all._
+import cats.instances.all._
 import cats.implicits._
 
 /**

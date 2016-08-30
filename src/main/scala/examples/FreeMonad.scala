@@ -1,7 +1,7 @@
 package examples
 import cats.free.Free
 import cats.free.Free._
-import cats.arrow.NaturalTransformation
+import cats.arrow.FunctionK
 import cats.{Id, Eval, ~>}
 import scala.collection.mutable
 import cats.data.State

@@ -1,0 +1,36 @@
+package examples
+import cats._, data._
+import org.atnos.eff._, all._
+import org.atnos.eff.syntax.all._
+import cats.implicits._
+
+object ExampleLocalReader {
+def localReaderEffect= {
+    type ReaderConfig[A] = Reader[Config, A]
+    type ReaderInt[A]    = Reader[Int, A]
+
+    def readFactor[R :_option](implicit r: ReaderInt |= R): Eff[R, String] = for {
+      c <- ask[R, Int]
+      h <- OptionEffect.some(c.toString + "\n")
+    } yield h
+
+    def readConfig[R :_option](implicit r: ReaderConfig |= R): Eff[R, String] = for {
+      c <- ask[R, Config]
+      h <- OptionEffect.some(c.toString + "\n")
+    } yield h
+    
+    type S1 = Fx.fx3[ReaderInt, ReaderConfig, Option]
+    type S2 = Fx.fx3[ReaderConfig, ReaderConfig, Option]
+    // The following doesn't work: 
+    // type S2 = Fx.fx2[ReaderConfig,Option]
+    
+    def action [R :_option](
+        implicit r1: ReaderConfig |= R): Eff[R, String] = for {
+      s2 <- readConfig[S2].localReader((c: Config) => Config(c.factor + 1, c.host + "1"))
+    } yield s1 + " " + s2 
+
+    action.runReader(Config(10, "www.me.com")).runReader(Config(10,"...")).runOption.run 
+  }
+  case class Config(factor: Int, host: String)
+
+}

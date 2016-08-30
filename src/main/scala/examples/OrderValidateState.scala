@@ -3,9 +3,13 @@ import cats._, data._
 import org.atnos.eff._, all._ 
 import org.atnos.eff.syntax.all._
 
-object Eff {
+object OrderValidateState {
 
-type Stack = Fx.fx3[Reader[Int, ?], Writer[String, ?], Eval]
+type Stack = Fx.fx4[
+  Reader[Int, ?], 
+  Writer[String, ?], 
+  Validate[String,?],
+  Eval]
   
 val program: Eff[Stack, Int] = for {
   // get the configuration
@@ -23,17 +27,6 @@ val program: Eff[Stack, Int] = for {
 
 // run the action with all the interpreters
 // each interpreter running one effect
-lazy val run0 = program.runReader(6).runWriter.runEval.run
-
-type Stack2 = Fx.fx4[Validate[String,?], Reader[Int, ?], Writer[String, ?], Eval]
-
-val program2: Eff[Stack2, Int] = for {
-  n <- ask[Stack2, Int]
-  _ <- tell[Stack2, String]("the required power is "+n)
-  a <- delay[Stack2, Int](math.pow(2, n.toDouble).toInt)
-  _ <- tell[Stack2, String]("the result is "+a)
-} yield a
-
-lazy val run2 = program2.runNel.runReader(4).runWriter.runEval.run
+lazy val run0 = program.runReader(6).runWriter.runNel.runEval.run
 
 }

@@ -6,7 +6,7 @@ import cats.implicits._
 class CheckedValTest 
  extends FunSpec with Matchers with OptionValues {
   
-  describe("Checked values") {
+/*  describe("Checked values") {
     it("Should check if they are ok") { 
       val x : CheckedVal[Int,List[Int]] = okSingle(2,List(2),"even")
       x.isOK should be(true)
@@ -19,7 +19,7 @@ class CheckedValTest
       r.isOK should be(true)
     }
   }
-  
+*/  
 }
 
 
