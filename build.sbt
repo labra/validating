@@ -7,7 +7,7 @@ organization := "es.weso"
 
 name := "validating"
 
-version := "0.0.16"
+version := "0.0.17"
 
 scalaVersion := "2.11.8"
 
